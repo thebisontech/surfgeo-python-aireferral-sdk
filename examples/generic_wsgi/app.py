@@ -21,7 +21,7 @@ def application(environ, start_response):
 # Wrap with surfgeo middleware
 app = surfgeoWSGIMiddleware(
     application,
-    script_key=os.environ.get('SURFGEO_SCRIPT_KEY', 'sk_your_key_here')
+    script_key=os.environ.get('surfgeo_SCRIPT_KEY', 'sk_your_key_here')
 )
 
 if __name__ == '__main__':

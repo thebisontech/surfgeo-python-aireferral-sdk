@@ -36,7 +36,7 @@ MIDDLEWARE = [
     'surfgeo.middleware.django.surfgeoMiddleware',
 ]
 
-SURFGEO_CONFIG = {
+surfgeo_CONFIG = {
     'script_key': 'sk_your_key_here'
 }
 ```
@@ -48,8 +48,8 @@ from flask import Flask
 from surfgeo import get_flask_extension
 
 app = Flask(__name__)
-SurfGeo = get_flask_extension()
-surfgeo = SurfGeo(app, script_key='sk_your_key_here')
+surfgeo = get_flask_extension()
+surfgeo = surfgeo(app, script_key='sk_your_key_here')
 ```
 
 ### FastAPI

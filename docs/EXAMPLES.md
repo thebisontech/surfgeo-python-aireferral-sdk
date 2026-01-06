@@ -15,8 +15,8 @@ MIDDLEWARE = [
     'surfgeo.middleware.django.surfgeoMiddleware',
 ]
 
-SURFGEO_CONFIG = {
-    'script_key': os.environ.get('SURFGEO_SCRIPT_KEY'),
+surfgeo_CONFIG = {
+    'script_key': os.environ.get('surfgeo_SCRIPT_KEY'),
     'debug': DEBUG,
     'enabled': not DEBUG
 }
@@ -31,10 +31,10 @@ from flask import Flask
 from surfgeo import get_flask_extension
 
 app = Flask(__name__)
-app.config['SURFGEO_SCRIPT_KEY'] = os.environ.get('SURFGEO_SCRIPT_KEY')
+app.config['surfgeo_SCRIPT_KEY'] = os.environ.get('surfgeo_SCRIPT_KEY')
 
-SurfGeo = get_flask_extension()
-surfgeo = SurfGeo(app)
+surfgeo = get_flask_extension()
+surfgeo = surfgeo(app)
 ```
 
 ### Factory Pattern
@@ -47,7 +47,7 @@ surfgeo = get_flask_extension()()
 
 def create_app():
     app = Flask(__name__)
-    app.config['SURFGEO_SCRIPT_KEY'] = os.environ.get('SURFGEO_SCRIPT_KEY')
+    app.config['surfgeo_SCRIPT_KEY'] = os.environ.get('surfgeo_SCRIPT_KEY')
     surfgeo.init_app(app)
     return app
 ```
@@ -64,7 +64,7 @@ app = FastAPI()
 
 app.add_middleware(
     surfgeoMiddleware,
-    script_key=os.environ.get('SURFGEO_SCRIPT_KEY'),
+    script_key=os.environ.get('surfgeo_SCRIPT_KEY'),
     debug=True
 )
 

@@ -1,10 +1,10 @@
 """
-SurfGEO Python SDK
+surfgeo Python SDK
 
 Track AI bot traffic on your Python servers
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # Core client
 from surfgeo.client import surfgeoClient, surfgeoConfig

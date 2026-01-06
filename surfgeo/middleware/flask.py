@@ -5,7 +5,7 @@ from surfgeo.payload import build_payload
 
 class surfgeo:
     """
-    Flask extension for SurfGEO tracking
+    Flask extension for surfgeo tracking
 
     Usage:
         app = Flask(__name__)
@@ -41,19 +41,19 @@ class surfgeo:
         """
         # Load config (priority: kwargs > app.config > defaults)
         script_key = config.get('script_key') or \
-                     app.config.get('SURFGEO_SCRIPT_KEY')
+                     app.config.get('surfgeo_SCRIPT_KEY')
 
         endpoint = config.get('endpoint') or \
-                   app.config.get('SURFGEO_ENDPOINT')
+                   app.config.get('surfgeo_ENDPOINT')
 
         timeout = config.get('timeout') or \
-                  app.config.get('SURFGEO_TIMEOUT', 0.05)
+                  app.config.get('surfgeo_TIMEOUT', 0.05)
 
         debug = config.get('debug') or \
-                app.config.get('SURFGEO_DEBUG', False)
+                app.config.get('surfgeo_DEBUG', False)
 
         enabled = config.get('enabled', True) and \
-                  app.config.get('SURFGEO_ENABLED', True)
+                  app.config.get('surfgeo_ENABLED', True)
 
         # Create config
         surf_config = surfgeoConfig(

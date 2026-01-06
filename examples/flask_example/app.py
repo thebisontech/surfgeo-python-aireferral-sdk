@@ -3,11 +3,11 @@ from flask import Flask, jsonify
 from surfgeo import get_flask_extension
 
 app = Flask(__name__)
-app.config['SURFGEO_SCRIPT_KEY'] = os.environ.get('SURFGEO_SCRIPT_KEY')
+app.config['surfgeo_SCRIPT_KEY'] = os.environ.get('surfgeo_SCRIPT_KEY')
 
 # Initialize surfgeo
-SurfGeo = get_flask_extension()
-surfgeo = SurfGeo(app)
+surfgeo = get_flask_extension()
+surfgeo = surfgeo(app)
 
 
 @app.route('/')

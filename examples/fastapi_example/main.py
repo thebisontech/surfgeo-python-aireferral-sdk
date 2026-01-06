@@ -7,7 +7,7 @@ app = FastAPI()
 # Add surfgeo middleware
 app.add_middleware(
     surfgeoMiddleware,
-    script_key=os.environ.get('SURFGEO_SCRIPT_KEY'),
+    script_key=os.environ.get('surfgeo_SCRIPT_KEY'),
     debug=True
 )
 

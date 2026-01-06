@@ -13,7 +13,7 @@ MIN_TIMEOUT = 0.01  # 10ms
 
 
 class surfgeoClient:
-    """Core tracking client for SurfGEO SDK"""
+    """Core tracking client for surfgeo SDK"""
 
     def __init__(self, config: surfgeoConfig):
         """

@@ -5,7 +5,7 @@ from unittest.mock import patch, MagicMock
 from surfgeo.client import surfgeoClient, surfgeoConfig
 
 
-class TestSurfGeoClient:
+class TestsurfgeoClient:
     def test_init_with_valid_config(self):
         """Should initialize with valid config"""
         config = surfgeoConfig(script_key='sk_test_key_123456789012345')
@@ -52,8 +52,8 @@ class TestSurfGeoClient:
         client.track({'path': '/test', 'method': 'GET', 'user_agent': 'test'})
         elapsed = time.time() - start
         
-        # Should return immediately (< 10ms)
-        assert elapsed < 0.01
+        # Should return immediately (< 20ms to account for Windows timing variance)
+        assert elapsed < 0.02
 
     def test_track_respects_enabled_flag(self):
         """Should skip tracking if enabled=False"""

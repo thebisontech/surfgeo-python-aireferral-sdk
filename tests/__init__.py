@@ -1,2 +1,2 @@
-"""Tests for SurfGEO Python SDK"""
+"""Tests for surfgeo Python SDK"""
 

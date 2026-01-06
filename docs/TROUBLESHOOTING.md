@@ -21,7 +21,7 @@ Ensure script_key is correct and starts with `sk_`
 ### Enable debug mode
 
 ```python
-SURFGEO_CONFIG = {
+surfgeo_CONFIG = {
     'script_key': 'sk_your_key',
     'debug': True  # See errors in console
 }

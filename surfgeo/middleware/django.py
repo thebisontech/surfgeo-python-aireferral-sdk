@@ -14,7 +14,7 @@ class surfgeoMiddleware:
             'surfgeo.middleware.django.surfgeoMiddleware',
         ]
 
-        SURFGEO_CONFIG = {
+        surfgeo_CONFIG = {
             'script_key': 'sk_your_key_here',
             'debug': DEBUG
         }
@@ -34,7 +34,7 @@ class surfgeoMiddleware:
 
         # Load config from settings
         from django.conf import settings
-        config_dict = getattr(settings, 'SURFGEO_CONFIG', {})
+        config_dict = getattr(settings, 'surfgeo_CONFIG', {})
 
         # Create config object
         self.config = surfgeoConfig(

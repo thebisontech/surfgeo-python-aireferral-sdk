@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2024-12-XX
+
+### Changed
+- Updated class naming convention from `SurfGeo*` to `surfgeo*` for consistency
+- All classes now use lowercase `surfgeo` prefix (e.g., `surfgeoClient`, `surfgeoConfig`)
+- Improved test reliability (fixed timing test for Windows)
+
 ## [1.0.0] - 2024-01-XX
 
 ### Added
